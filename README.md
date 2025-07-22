@@ -4,4 +4,4 @@ Wine은 간단한 와인 리뷰 플랫폼입니다.
 리뷰를 직접 작성하고 볼 수 있는 직관적인 플랫폼이 있었으면 좋겠다고 생각해 제작하게 되었습니다.
 
 ## 📆 개발 스케쥴
-https://github.com/users/junjeeong/projects/4/views/1
+[Go Project](https://github.com/users/junjeeong/projects/4/views/1)
