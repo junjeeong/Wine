@@ -7,11 +7,12 @@ type System = "system" | "dark" | "light";
 const Toaster = ({ ...props }: ToasterProps) => {
   const { theme } = useTheme();
 
-  const resolvedTheme: "light" | "dark" | "system" = (theme as System) ?? "system"; // ✅ undefined 제거
+  const resolvedTheme: "light" | "dark" | "system" =
+    theme === undefined ? "system" : (theme as System);
 
   return (
     <Sonner
-      theme={resolvedTheme} // ✅ 정확한 union 타입
+      theme={resolvedTheme as "light" | "dark" | "system"}
       className="toaster group"
       style={
         {
