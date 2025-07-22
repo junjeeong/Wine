@@ -2,6 +2,11 @@ const config = {
   content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screen: {
+        sm: "343px",
+        md: "744px",
+        lg: "1024px",
+      },
       colors: {
         primary: "var(--color-primary)",
         black: "var(--color-black)",
