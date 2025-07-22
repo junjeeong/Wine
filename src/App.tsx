@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "@/page/home";
-import MyProfile from "@/page/me";
+import MyProfile from "@/page/my-profile";
 import SignUp from "@/page/auth/sign-up";
 import SignIn from "@/page/auth/sign-in";
 import WineList from "@/page/wines";
@@ -13,9 +13,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/myprofile" element={<MyProfile />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/signin" element={<SignIn />} />
+          <Route path="/my-profile" element={<MyProfile />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-in" element={<SignIn />} />
           <Route path="/wines" element={<WineList />} />
           <Route path="/wines/:wineId" element={<WineDetail />} />
         </Routes>
