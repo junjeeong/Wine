@@ -2,12 +2,16 @@ import { useTheme } from "next-themes";
 import { Toaster as Sonner } from "sonner";
 import type { ToasterProps } from "sonner";
 
+type System = "system" | "dark" | "light";
+
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "system" } = useTheme();
+  const { theme } = useTheme();
+
+  const resolvedTheme: "light" | "dark" | "system" = (theme as System) ?? "system"; // ✅ undefined 제거
 
   return (
     <Sonner
-      theme={(theme ?? "system") as ToasterProps["theme"]}
+      theme={resolvedTheme} // ✅ 정확한 union 타입
       className="toaster group"
       style={
         {
